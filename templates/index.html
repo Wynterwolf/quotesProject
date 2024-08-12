@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Supernatural Quotes Manager</title>
+    <title>Supernatural Quotes</title>
+
+    <!-- Include Select2 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Supernatural Quotes Manager</h1>
+    <h1>Supernatural Quotes</h1>
 
     {% if quote %}
     <h2>Random Quote</h2>
@@ -41,9 +47,11 @@
         <option value="Season 15">Season 15</option>
       </select>
 
+      <!-- Episode input field -->
       <label for="episode">Episode:</label>
       <input type="text" id="episode" name="episode" /><br /><br />
 
+      <!-- Characters dropdown with Select2 applied -->
       <label for="character">Character(s):</label>
       <select id="character" name="character" multiple>
         <option value="Dean Winchester">Dean Winchester</option>
@@ -53,11 +61,26 @@
         <!-- Add more characters as needed -->
       </select>
 
+      <!-- Quote input field -->
       <label for="quote">Quote:</label>
       <textarea id="quote" name="quote" rows="4" cols="50"></textarea
       ><br /><br />
 
+      <!-- Submit button -->
       <input type="submit" value="Add Quote" />
     </form>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#character").select2({
+          placeholder: "Select one or more characters",
+        });
+      });
+    </script>
   </body>
 </html>

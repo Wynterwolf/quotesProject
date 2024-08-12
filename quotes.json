@@ -41,5 +41,22 @@
             "Bobby Singer"
         ],
         "quote": "I said what I said!"
+    },
+    {
+        "season": "Season 1",
+        "episode": "307",
+        "characters": [
+            "Dean Winchester"
+        ],
+        "quote": "Another test quote. "
+    },
+    {
+        "season": "Season 15",
+        "episode": "308",
+        "characters": [
+            "Sam Winchester",
+            "Castiel"
+        ],
+        "quote": "Sam and Castiel test"
     }
 ]
