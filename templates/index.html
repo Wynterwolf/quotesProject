@@ -29,7 +29,7 @@
     <form action="{{ url_for('add_quote') }}" method="POST">
       <!-- Season dropdown -->
       <label for="season">Season:</label>
-      <select id="season" name="season">
+      <select id="season" name="season" onchange="updateEpisodes()">
         <option value="Season 1">Season 1</option>
         <option value="Season 2">Season 2</option>
         <option value="Season 3">Season 3</option>
@@ -49,7 +49,9 @@
 
       <!-- Episode input field -->
       <label for="episode">Episode:</label>
-      <input type="text" id="episode" name="episode" /><br /><br />
+      <select id="episode" name="episode">
+        <!-- Options will be dynamically populated based on the selected season -->
+      </select>
 
       <!-- Characters dropdown with Select2 applied -->
       <label for="character">Character(s):</label>
@@ -81,6 +83,59 @@
           placeholder: "Select one or more characters",
         });
       });
+    </script>
+
+    <!-- JavaScript to dynamically update episodes -->
+    <script>
+      const episodes = {
+        "Season 1": [
+          "1.01 Pilot",
+          "1.02 Wendigo",
+          "1.03 Dead in the Water",
+          "1.04 Phantom Traveler",
+          "1.05 Bloody Mary",
+          "1.06 Skin",
+          "1.07 Hook Man",
+          "1.08 Bugs",
+          "1.09 Home",
+          "1.10 Asylum",
+          "1.11 Scarecrow",
+          "1.12 Faith",
+          "1.13 Route 666",
+          "1.14 Nightmare",
+          "1.15 The Benders",
+          "1.16 Shadow",
+          "1.17 Hell House",
+          "1.18 Something Wicked",
+          "1.19 Provenance",
+          "1.20 Dead Man's Blood",
+          "1.21 Salvation",
+          "1.22 Devil's Trap,",
+        ],
+        "Season 2": [
+          "Episode 1",
+          "Episode 2",
+          "Episode 3" /* Add all episodes for Season 2 */,
+        ],
+        // Add more seasons and their corresponding episodes
+      };
+
+      function updateEpisodes() {
+        const seasonSelect = document.getElementById("season");
+        const episodeSelect = document.getElementById("episode");
+        const selectedSeason = seasonSelect.value;
+
+        // Clear current episode options
+        episodeSelect.innerHTML = "";
+
+        // Populate episodes based on the selected season
+        episodes[selectedSeason].forEach(function (episode) {
+          const option = document.createElement("option");
+          option.value = episode;
+          option.text = episode;
+          episodeSelect.add(option);
+        });
+      }
     </script>
   </body>
 </html>
