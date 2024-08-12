@@ -8,12 +8,6 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='styles/quote_style.css') }}"
     />
-
-    <!-- Include Select2 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <h1>Supernatural Quotes</h1>
@@ -24,7 +18,6 @@
     <p><strong>Episode:</strong> {{ quote['episode'] }}</p>
     <p><strong>Characters:</strong> {{ quote['characters'] }}</p>
     <p><strong>Quote:</strong> {{ quote['quote'] | safe }}</p>
-    <!-- Use the safe filter here -->
     {% else %}
     <p>No quotes available.</p>
     {% endif %}
@@ -57,7 +50,7 @@
         <!-- Options will be dynamically populated based on the selected season -->
       </select>
 
-      <!-- Characters dropdown with Select2 applied -->
+      <!-- Characters dropdown without Select2 -->
       <label for="character">Character(s):</label>
       <select id="character" name="character" multiple>
         <option value="Dean Winchester">Dean Winchester</option>
@@ -75,19 +68,6 @@
       <!-- Submit button -->
       <input type="submit" value="Add Quote" />
     </form>
-
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include Select2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $("#character").select2({
-          placeholder: "Select one or more characters",
-        });
-      });
-    </script>
 
     <!-- JavaScript to dynamically update episodes -->
     <script>

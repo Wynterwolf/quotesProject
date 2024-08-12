@@ -73,57 +73,14 @@ button:active {
     border-color: #900;
 }
 
-/* Style the Select2 container to match other dropdowns */
-.select2-container .select2-selection--single,
-.select2-container .select2-selection--multiple {
-    background-color: #2e2e2e !important; /* Dark background for the dropdown */
-    border: 1px solid #555 !important;
-    color: #f5f5f5 !important; /* White text */
-    padding: 5px;
+/* Style the multiple select to match other dropdowns */
+select[multiple] {
+    background-color: #2e2e2e;
+    border: 1px solid #555;
+    color: #f5f5f5;
+    padding: 10px;
     font-family: 'UnifrakturCook', serif;
+    margin-bottom: 20px;
     border-radius: 5px;
-}
-
-/* Customize the selected items */
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
-    background-color: #444;
-    border: 1px solid #333;
-    color: #f5f5f5 !important;
-    margin: 5px 5px 5px 0;
-    padding: 3px 10px;
-    border-radius: 3px;
-}
-
-/* Customize the remove button (x) */
-.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-    color: #f5f5f5;
-}
-
-/* Placeholder text color */
-.select2-container--default .select2-selection__placeholder {
-    color: #f5f5f5 !important; /* White placeholder text */
-}
-
-/* Style the dropdown options */
-.select2-container--default .select2-results__option {
-    background-color: #2e2e2e !important; /* Dark background for options */
-    color: #f5f5f5 !important; /* White text color */
-}
-
-/* Highlighted option in the dropdown */
-.select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: #444 !important; /* Slightly lighter for highlighted option */
-    color: #fff !important; /* White text color for highlighted option */
-}
-
-/* Ensure the search input in the multiple select is styled consistently */
-.select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field {
-    background: transparent;
-    border: none;
-    color: #f5f5f5;
-    font-family: 'UnifrakturCook', serif;
-}
-
-.select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field:focus {
-    outline: none;
+    height: auto; /* Allows the dropdown to expand based on content */
 }
