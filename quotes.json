@@ -1,0 +1,45 @@
+[
+    {
+        "season": "Season 2",
+        "episode": "Episode 4",
+        "character": "Dean Winchester",
+        "quote": "We can't just waste it with a headshot?"
+    },
+    {
+        "season": "Season 1",
+        "episode": "Episode 1",
+        "character": "Dean Winchester",
+        "quote": "Driver picks the music, shotgun shuts his cake hole."
+    },
+    {
+        "season": "Season 1",
+        "episode": "Episode 1",
+        "character": "Dean Winchester",
+        "quote": "No chick flick moments."
+    },
+    {
+        "season": "Season 1",
+        "episode": "Episode 1",
+        "characters": [
+            "Dean Winchester",
+            "Sam Winchester"
+        ],
+        "quote": "<ul style='list-style-type:none;'><li>Sam: Alright ... jerk.</li><li>Dean: Bitch</li></ul>"
+    },
+    {
+        "season": "season 19",
+        "episode": "305",
+        "character": "One that doesn't exist",
+        "quote": "This quote, that doesn't exist."
+    },
+    {
+        "season": "season 19",
+        "episode": "306",
+        "characters": [
+            "Dean Winchester",
+            "Castiel",
+            "Bobby Singer"
+        ],
+        "quote": "I said what I said!"
+    }
+]

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supernatural Quotes Manager</title>
+  </head>
+  <body>
+    <h1>Supernatural Quotes Manager</h1>
+
+    {% if quote %}
+    <h2>Random Quote</h2>
+    <p><strong>Season:</strong> {{ quote['season'] }}</p>
+    <p><strong>Episode:</strong> {{ quote['episode'] }}</p>
+    <p><strong>Characters:</strong> {{ quote['characters'] }}</p>
+    <p><strong>Quote:</strong> {{ quote['quote'] | safe }}</p>
+    <!-- Use the safe filter here -->
+    {% else %}
+    <p>No quotes available.</p>
+    {% endif %}
+
+    <h2>Add a New Quote</h2>
+    <form action="{{ url_for('add_quote') }}" method="POST">
+      <!-- Season dropdown -->
+      <label for="season">Season:</label>
+      <select id="season" name="season">
+        <option value="Season 1">Season 1</option>
+        <option value="Season 2">Season 2</option>
+        <option value="Season 3">Season 3</option>
+        <option value="Season 4">Season 4</option>
+        <option value="Season 5">Season 5</option>
+        <option value="Season 6">Season 6</option>
+        <option value="Season 7">Season 7</option>
+        <option value="Season 8">Season 8</option>
+        <option value="Season 9">Season 9</option>
+        <option value="Season 10">Season 10</option>
+        <option value="Season 11">Season 11</option>
+        <option value="Season 12">Season 12</option>
+        <option value="Season 13">Season 13</option>
+        <option value="Season 14">Season 14</option>
+        <option value="Season 15">Season 15</option>
+      </select>
+
+      <label for="episode">Episode:</label>
+      <input type="text" id="episode" name="episode" /><br /><br />
+
+      <label for="character">Character(s):</label>
+      <select id="character" name="character" multiple>
+        <option value="Dean Winchester">Dean Winchester</option>
+        <option value="Sam Winchester">Sam Winchester</option>
+        <option value="Castiel">Castiel</option>
+        <option value="Bobby Singer">Bobby Singer</option>
+        <!-- Add more characters as needed -->
+      </select>
+
+      <label for="quote">Quote:</label>
+      <textarea id="quote" name="quote" rows="4" cols="50"></textarea
+      ><br /><br />
+
+      <input type="submit" value="Add Quote" />
+    </form>
+  </body>
+</html>
