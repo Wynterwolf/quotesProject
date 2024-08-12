@@ -58,5 +58,21 @@
             "Castiel"
         ],
         "quote": "Sam and Castiel test"
+    },
+    {
+        "season": "Season 1",
+        "episode": "1.13 Route 666",
+        "characters": [
+            "Dean Winchester"
+        ],
+        "quote": "Testing this outl."
+    },
+    {
+        "season": "Season 1",
+        "episode": "1.01 Pilot",
+        "characters": [
+            "Dean Winchester"
+        ],
+        "quote": "Testing this ou t again. Blah blah blah"
     }
 ]

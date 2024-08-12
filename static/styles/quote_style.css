@@ -1,0 +1,129 @@
+body {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    font-family: 'UnifrakturCook', serif;
+    background-image: url(../styles/images/supernatural_background.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #c03;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #000;
+}
+
+label {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+select, textarea, input[type="text"] {
+    width: 100%;
+    background-color: #2e2e2e;
+    border: 1px solid #555;
+    color: #f5f5f5;
+    padding: 10px;
+    font-family: 'UnifrakturCook', serif;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+select:focus, textarea:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #c03;
+    box-shadow: 0 0 10px #c03;
+}
+
+button {
+    background-color: #2e2e2e;
+    border: 2px solid #c03;
+    color: #f5f5f5;
+    padding: 10px 20px;
+    font-family: 'UnifrakturCook', serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #c03;
+    box-shadow: 0 0 10px #c03;
+    color: #fff;
+}
+
+button:active {
+    background-color: #900;
+    border-color: #900;
+}
+
+/* Style the Select2 container to match other dropdowns */
+.select2-container .select2-selection--single,
+.select2-container .select2-selection--multiple {
+    background-color: #2e2e2e !important; /* Dark background for the dropdown */
+    border: 1px solid #555 !important;
+    color: #f5f5f5 !important; /* White text */
+    padding: 5px;
+    font-family: 'UnifrakturCook', serif;
+    border-radius: 5px;
+}
+
+/* Customize the selected items */
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #444;
+    border: 1px solid #333;
+    color: #f5f5f5 !important;
+    margin: 5px 5px 5px 0;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+/* Customize the remove button (x) */
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #f5f5f5;
+}
+
+/* Placeholder text color */
+.select2-container--default .select2-selection__placeholder {
+    color: #f5f5f5 !important; /* White placeholder text */
+}
+
+/* Style the dropdown options */
+.select2-container--default .select2-results__option {
+    background-color: #2e2e2e !important; /* Dark background for options */
+    color: #f5f5f5 !important; /* White text color */
+}
+
+/* Highlighted option in the dropdown */
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #444 !important; /* Slightly lighter for highlighted option */
+    color: #fff !important; /* White text color for highlighted option */
+}
+
+/* Ensure the search input in the multiple select is styled consistently */
+.select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field {
+    background: transparent;
+    border: none;
+    color: #f5f5f5;
+    font-family: 'UnifrakturCook', serif;
+}
+
+.select2-container--default .select2-selection--multiple .select2-search--inline .select2-search__field:focus {
+    outline: none;
+}

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Supernatural Quotes</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/quote_style.css') }}"
+    />
 
     <!-- Include Select2 CSS -->
     <link
@@ -136,6 +140,11 @@
           episodeSelect.add(option);
         });
       }
+
+      // Ensure episodes are loaded when the page loads
+      window.onload = function () {
+        updateEpisodes(); // Populate episodes on initial load
+      };
     </script>
   </body>
 </html>
