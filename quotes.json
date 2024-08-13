@@ -119,5 +119,14 @@
             "Jodi"
         ],
         "quote": "This is jodi, leave a message at the beep. To dean"
+    },
+    {
+        "season": "Season 3",
+        "episode": "3.06 Red Sky at Morning",
+        "characters": [
+            "Castiel",
+            "Bobby Singer"
+        ],
+        "quote": "Castiel, booby and Jodi what-fer-face"
     }
 ]
