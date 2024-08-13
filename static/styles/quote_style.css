@@ -165,3 +165,20 @@ button:active {
     background-color: #900;
     border-color: #900;
 }
+
+body {
+    font-family: 'Arial', sans-serif; /* Replace 'Arial' with your desired font */
+    font-size: 16px; /* Replace '16px' with your desired size */
+    color: #FFFFFF; /* Optional: Set a color for your text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    color: inherit;
+}
+
+p, label, input, select, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}

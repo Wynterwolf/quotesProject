@@ -101,5 +101,23 @@
             "Sam Winchester"
         ],
         "quote": "Dean and Sam, in a treehouse."
+    },
+    {
+        "season": "Season 2",
+        "episode": "2.02 Everybody Loves a Clown",
+        "characters": [
+            "Dean Winchester",
+            "Sam Winchester"
+        ],
+        "quote": "clown makeup!"
+    },
+    {
+        "season": "Season 3",
+        "episode": "3.10 Dream a Little Dream of Me",
+        "characters": [
+            "Dean Winchester",
+            "Jodi"
+        ],
+        "quote": "This is jodi, leave a message at the beep. To dean"
     }
 ]
