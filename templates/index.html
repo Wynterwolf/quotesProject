@@ -259,16 +259,22 @@
         .addEventListener("click", function () {
           var container = document.querySelector(".character-checkbox");
 
-          var newLabel = document.createElement("label");
-          var newCheckbox = document.createElement("input");
-          newCheckbox.type = "checkbox";
-          newCheckbox.name = "characters[]";
-          newCheckbox.value = ""; // You can prompt the user to enter a name or leave it blank
+          // Prompt the user to enter a character name
+          var characterName = prompt("Enter the character's name:");
 
-          newLabel.textContent = "New Character"; // Default text
-          newLabel.prepend(newCheckbox);
+          // Only proceed if the user entered a name
+          if (characterName) {
+            var newLabel = document.createElement("label");
+            var newCheckbox = document.createElement("input");
+            newCheckbox.type = "checkbox";
+            newCheckbox.name = "characters[]";
+            newCheckbox.value = characterName; // Use the entered name as the value
 
-          container.appendChild(newLabel);
+            newLabel.textContent = characterName; // Use the entered name as the label text
+            newLabel.prepend(newCheckbox);
+
+            container.appendChild(newLabel);
+          }
         });
     </script>
   </body>
