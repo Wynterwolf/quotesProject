@@ -86,5 +86,20 @@
         "episode": "3.12 Jus in Bello",
         "characters": [],
         "quote": "PUDDING!"
+    },
+    {
+        "season": "Season 2",
+        "episode": "2.19 Folsom Prison Blues",
+        "characters": [],
+        "quote": "prison blues!"
+    },
+    {
+        "season": "Season 1",
+        "episode": "1.01 Pilot",
+        "characters": [
+            "Dean Winchester",
+            "Sam Winchester"
+        ],
+        "quote": "Dean and Sam, in a treehouse."
     }
 ]

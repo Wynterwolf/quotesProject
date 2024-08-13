@@ -38,7 +38,7 @@ def index():
 def add_quote():
     season = request.form.get('season')
     episode = request.form.get('episode')
-    characters = request.form.getlist('character')  # Use getlist to retrieve multiple values
+    characters = request.form.getlist('characters[]')  # Corrected to match the form name attribute
     quote = request.form.get('quote')
 
     new_quote = {
