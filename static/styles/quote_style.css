@@ -73,14 +73,47 @@ button:active {
     border-color: #900;
 }
 
-/* Style the multiple select to match other dropdowns */
-select[multiple] {
+/* Container to simulate a dropdown */
+.custom-multiple-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
     background-color: #2e2e2e;
     border: 1px solid #555;
-    color: #f5f5f5;
-    padding: 10px;
-    font-family: 'UnifrakturCook', serif;
-    margin-bottom: 20px;
     border-radius: 5px;
-    height: auto; /* Allows the dropdown to expand based on content */
+    padding: 5px;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+
+.custom-multiple-select select {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #f5f5f5;
+    height: 38px; /* Match the height of other dropdowns */
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Style options within the dropdown */
+.custom-multiple-select select option {
+    background-color: #2e2e2e;
+    color: #f5f5f5;
+}
+
+.custom-multiple-select::after {
+    content: '▼'; /* Dropdown arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #f5f5f5;
+}
+
+/* Optional: Style selected options */
+.custom-multiple-select select:focus option:checked {
+    background-color: #444;
 }

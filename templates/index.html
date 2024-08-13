@@ -50,15 +50,17 @@
         <!-- Options will be dynamically populated based on the selected season -->
       </select>
 
-      <!-- Characters dropdown without Select2 -->
+      <!-- Characters dropdown with custom multiple select -->
       <label for="character">Character(s):</label>
-      <select id="character" name="character" multiple>
-        <option value="Dean Winchester">Dean Winchester</option>
-        <option value="Sam Winchester">Sam Winchester</option>
-        <option value="Castiel">Castiel</option>
-        <option value="Bobby Singer">Bobby Singer</option>
-        <!-- Add more characters as needed -->
-      </select>
+      <div class="custom-multiple-select">
+        <select id="character" name="character[]" multiple>
+          <option value="Dean Winchester">Dean Winchester</option>
+          <option value="Sam Winchester">Sam Winchester</option>
+          <option value="Castiel">Castiel</option>
+          <option value="Bobby Singer">Bobby Singer</option>
+          <!-- Add more characters as needed -->
+        </select>
+      </div>
 
       <!-- Quote input field -->
       <label for="quote">Quote:</label>
@@ -125,6 +127,22 @@
       window.onload = function () {
         updateEpisodes(); // Populate episodes on initial load
       };
+
+      // JavaScript for enhancing the custom multiple select
+      document
+        .querySelectorAll(".custom-multiple-select select")
+        .forEach((select) => {
+          select.addEventListener("click", function (event) {
+            const options = this.options;
+            const values = [];
+            for (let i = 0; i < options.length; i++) {
+              if (options[i].selected) {
+                values.push(options[i].text);
+              }
+            }
+            this.title = values.join(", ");
+          });
+        });
     </script>
   </body>
 </html>
