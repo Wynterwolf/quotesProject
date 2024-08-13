@@ -52,14 +52,37 @@
 
       <!-- Characters dropdown with custom multiple select -->
       <label for="character">Character(s):</label>
-      <div class="custom-multiple-select">
-        <select id="character" name="character[]" multiple>
-          <option value="Dean Winchester">Dean Winchester</option>
-          <option value="Sam Winchester">Sam Winchester</option>
-          <option value="Castiel">Castiel</option>
-          <option value="Bobby Singer">Bobby Singer</option>
-          <!-- Add more characters as needed -->
-        </select>
+      <div id="character-container">
+        <div class="character-checkbox">
+          <label
+            ><input
+              type="checkbox"
+              name="characters[]"
+              value="Dean Winchester"
+            />
+            Dean Winchester</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="characters[]"
+              value="Sam Winchester"
+            />
+            Sam Winchester</label
+          >
+          <label
+            ><input type="checkbox" name="characters[]" value="Castiel" />
+            Castiel</label
+          >
+          <label
+            ><input type="checkbox" name="characters[]" value="Bobby Singer" />
+            Bobby Singer</label
+          >
+          <!-- Add more checkboxes as needed -->
+        </div>
+        <button type="button" id="add-character" class="btn btn-secondary">
+          Add Character
+        </button>
       </div>
 
       <!-- Quote input field -->
@@ -226,6 +249,26 @@
             }
             this.title = values.join(", ");
           });
+        });
+    </script>
+
+    <!-- functionality to denamically add characters -->
+    <script>
+      document
+        .getElementById("add-character")
+        .addEventListener("click", function () {
+          var container = document.querySelector(".character-checkbox");
+
+          var newLabel = document.createElement("label");
+          var newCheckbox = document.createElement("input");
+          newCheckbox.type = "checkbox";
+          newCheckbox.name = "characters[]";
+          newCheckbox.value = ""; // You can prompt the user to enter a name or leave it blank
+
+          newLabel.textContent = "New Character"; // Default text
+          newLabel.prepend(newCheckbox);
+
+          container.appendChild(newLabel);
         });
     </script>
   </body>

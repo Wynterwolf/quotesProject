@@ -80,5 +80,11 @@
         "episode": null,
         "characters": [],
         "quote": "test"
+    },
+    {
+        "season": "Season 3",
+        "episode": "3.12 Jus in Bello",
+        "characters": [],
+        "quote": "PUDDING!"
     }
 ]

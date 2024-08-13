@@ -117,3 +117,51 @@ button:active {
 .custom-multiple-select select:focus option:checked {
     background-color: #444;
 }
+
+.character-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between checkboxes */
+    margin-top: 20px; /* Space between the label and checkboxes */
+}
+
+.character-checkbox label {
+    background-color: #2e2e2e;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 5px;
+    color: #f5f5f5;
+    font-family: 'UnifrakturCook', serif;
+}
+
+.character-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#character-container {
+    margin-top: 20px;
+}
+
+/* Optional: Style the add character button */
+#add-character {
+    margin-top: 20px;
+    background-color: #2e2e2e;
+    border: 2px solid #c03;
+    color: #f5f5f5;
+    padding: 10px 20px;
+    font-family: 'UnifrakturCook', serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+#add-character:hover {
+    background-color: #c03;
+    box-shadow: 0 0 10px #c03;
+    color: #fff;
+}
+
+#add-character:active {
+    background-color: #900;
+    border-color: #900;
+}
